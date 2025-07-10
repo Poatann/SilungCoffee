@@ -336,14 +336,14 @@ footer .footer-bottom {
 }
 
 @font-face {
-  font-family: 'Blenny';
-  src: url('fonts/Blenny.ttf') format('truetype'); /* adjust the path if needed */
+  font-family: 'Sunny';
+  src: url('/fonts/Sunny.otf') format('truetype'); /* adjust the path if needed */
   font-weight: normal;
   font-style: normal;
 }
 
 h1, h2, h3 {
-  font-family: 'Blenny', sans-serif;
+  font-family: 'Sunny', sans-serif;
   color: #5e3b1d; /* brown */
 }
 
