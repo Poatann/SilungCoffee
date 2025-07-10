@@ -335,6 +335,18 @@ footer .footer-bottom {
   text-decoration: underline;
 }
 
+@font-face {
+  font-family: 'Blenny';
+  src: url('fonts/Blenny.ttf') format('truetype'); /* adjust the path if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  font-family: 'Blenny', sans-serif;
+  color: #5e3b1d; /* brown */
+}
+
 @media (max-width: 768px) {
   nav .logo img {
     height: 60px;
