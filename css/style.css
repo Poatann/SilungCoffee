@@ -342,7 +342,8 @@ footer .footer-bottom {
   font-style: normal;
 }
 
-h1, h2, h3 {
+h2 {
+  font-size: 70px;
   font-family: 'Sunny', sans-serif;
   color: #5e3b1d; /* brown */
 }
