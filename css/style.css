@@ -337,7 +337,7 @@ footer .footer-bottom {
 
 @font-face {
   font-family: 'Sunny';
-  src: url('/fonts/Sunny.otf') format('truetype'); /* adjust the path if needed */
+  src: url('../fonts/Sunny.otf') format('truetype'); /* adjust the path if needed */
   font-weight: normal;
   font-style: normal;
 }
