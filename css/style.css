@@ -14,10 +14,9 @@ header {
   background-color: #fff;
   padding: 20px 40px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  position: static;
 }
+
 
 nav {
   display: flex;
@@ -278,9 +277,9 @@ nav ul li a:hover {
 
 footer {
   background-color: #5e3b1d;
-  color: #fff;
-  padding: 1px 1px;
+  color: white;
   text-align: center;
+  padding: 10px 0;
 }
 
 footer p {
@@ -332,6 +331,23 @@ footer .footer-bottom {
 .social-links a:hover {
   text-decoration: underline;
 }
+
+html, body {
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+
+
 
 @font-face {
   font-family: 'Sunny';

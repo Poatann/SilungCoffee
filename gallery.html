@@ -70,18 +70,5 @@
   <footer>
     <p>&copy; 2025 Silung. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const videos = document.querySelectorAll('.videos-track video');
-      videos.forEach(video => {
-        video.addEventListener('play', () => {
-          videos.forEach(other => {
-            if (other !== video) other.pause();
-          });
-        });
-      });
-    });
-  </script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - Silung Coffee</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/signup.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="img/silung coffee.png" alt="Silung Coffee Logo" />
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 40px auto; gap: 20px; padding: 0 20px;">
+      <!-- FORM SECTION -->
+      <section style="flex: 1; min-width: 320px;">
+        <h2 style="margin-bottom: 20px;">Customer Sign-Up</h2>
+        <form id="signupForm" style="display: flex; flex-direction: column; gap: 10px;">
+          <input type="text" name="firstName" placeholder="First Name" required>
+          <input type="text" name="lastName" placeholder="Last Name" required>
+
+          <div>
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+          </div>
+
+          <textarea name="address" rows="3" placeholder="Address" required></textarea>
+          <input type="text" name="contact" placeholder="Contact Number" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="date" name="dob" required>
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+
+          <div style="display: flex; gap: 10px;">
+            <button type="submit" class="cta-button">Submit</button>
+            <button type="reset" class="cta-button" style="background-color: gray;">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- OUTPUT SECTION -->
+      <section style="flex: 1; min-width: 320px;">
+        <h2 style="margin-bottom: 20px;">Submitted Information</h2>
+        <div id="output" style="background: #f9f9f9; border: 1px solid #ccc; padding: 15px; border-radius: 5px;"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Silung. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
