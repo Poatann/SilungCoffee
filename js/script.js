@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
   const track = document.querySelector('.gallery-track');
   const leftBtn = document.querySelector('.gallery-btn.left');

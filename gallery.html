@@ -2,90 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Silung Coffee</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
   <link rel="icon" type="image/x-icon" href="img/silung coffee2.png">
-  <script src="js/script.js" defer></script>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-    }
-    body {
-      font-family: sans-serif;
-    }
-    main {
-      flex: 1;
-    }
-    footer {
-      background-color: #5e3b1d;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .logo img {
-      height: 50px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    nav ul li a:hover {
-      color: #7b4b2a;
-    }
-    .gallery-container {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-    }
-    .gallery-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-    .gallery-track img {
-      width: 50vw;
-      height: auto;
-      flex-shrink: 0;
-      object-fit: cover;
-    }
-    .gallery-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 24px;
-      z-index: 10;
-    }
-    .gallery-btn.left {
-      left: 10px;
-    }
-    .gallery-btn.right {
-      right: 10px;
-    }
-  </style>
+  <script src="js/gallery.js" defer></script>
 </head>
 <body>
   <header>
@@ -98,14 +19,15 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <li><a href="menu.html">Menu</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#videos">Videos</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="gallery" class="gallery-section">
-      <h2>Gallery</h2>
+      <h2>SILUNG MOMENTS</h2>
       <div class="gallery-container">
         <button class="gallery-btn left">&#10094;</button>
         <div class="gallery-track">
@@ -125,10 +47,41 @@
         <button class="gallery-btn right">&#10095;</button>
       </div>
     </section>
+
+    <section id="videos" class="videos-section">
+      <h2>SILUNG VIDEOS</h2>
+      <div class="videos-container">
+        <button class="video-btn left">&#10094;</button>
+        <div class="videos-track">
+          <video src="img/Silunggallery.mp4" controls></video>
+          <video src="img/silunggallery2.mp4" controls></video>
+          <video src="img/silunggallery3.mp4" controls></video>
+          <video src="img/Silunggallery4.mp4" controls></video>
+          <video src="img/Silunggallery5.mp4" controls></video>
+          <video src="img/Silunggallery6.mp4" controls></video>
+          <video src="img/Silunggallery7.mp4" controls></video>
+          <video src="img/Silunggallery8.mp4" controls></video>
+        </div>
+        <button class="video-btn right">&#10095;</button>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Silung. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const videos = document.querySelectorAll('.videos-track video');
+      videos.forEach(video => {
+        video.addEventListener('play', () => {
+          videos.forEach(other => {
+            if (other !== video) other.pause();
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
