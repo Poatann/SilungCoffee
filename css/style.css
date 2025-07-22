@@ -1,4 +1,3 @@
-/* General resets */
 * {
   margin: 0;
   padding: 0;
@@ -43,9 +42,9 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
   display: inline-block; /* Needed for transform */
   transition: color 0.3s, transform 0.3s, font-weight 0.3s, text-shadow 0.3s;
+  font-weight: bold;
 }
 
 nav ul li a:hover {
@@ -53,6 +52,7 @@ nav ul li a:hover {
   font-weight: 700;
   transform: scale(1.3) translateY(-3px); /* Much bigger zoom & more lift */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* Slightly stronger shadow */
+  font-weight: bold;
 }
 
 
