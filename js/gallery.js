@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
   let position = 0;
   const imageWidth = 310;
 
-  
   images.forEach(img => {
     const clone = img.cloneNode(true);
     track.appendChild(clone);
   });
 
- 
   rightBtn.addEventListener('click', () => {
     position += imageWidth;
     track.style.transition = 'transform 0.3s ease';
@@ -29,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  
   leftBtn.addEventListener('click', () => {
     position -= imageWidth;
     track.style.transition = 'transform 0.3s ease';
@@ -44,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  
   const overlay = document.createElement('div');
   overlay.style.position = 'fixed';
   overlay.style.top = 0;
@@ -78,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  
   const videoTrack = document.querySelector('.videos-track');
   const videoLeftBtn = document.querySelector('.video-btn.left');
   const videoRightBtn = document.querySelector('.video-btn.right');
@@ -98,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
     videoTrack.appendChild(clone);
   });
 
-  //loop rght
   videoRightBtn.addEventListener('click', () => {
     videoPosition += videoWidth;
     videoTrack.style.transition = 'transform 0.3s ease';
@@ -113,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  //loop lft
   videoLeftBtn.addEventListener('click', () => {
     videoPosition -= videoWidth;
     videoTrack.style.transition = 'transform 0.3s ease';
@@ -128,7 +121,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Pause other videos when one is played
   const allVideos = document.querySelectorAll('.videos-track video');
   allVideos.forEach(video => {
     video.addEventListener('play', () => {
