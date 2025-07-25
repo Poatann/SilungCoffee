@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay.appendChild(overlayImg);
   document.body.appendChild(overlay);
 
-  // Hide overlay on click
+ 
   overlay.addEventListener('click', () => {
     overlay.style.display = 'none';
     overlayImg.src = '';
   });
 
-  // Show overlay on image click
+
   document.querySelectorAll('.gallery-track img').forEach(img => {
     img.addEventListener('click', (e) => {
       e.stopPropagation();

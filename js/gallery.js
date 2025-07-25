@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // ===== IMAGE GALLERY LOOPING =====
+  
   const track = document.querySelector('.gallery-track');
   const leftBtn = document.querySelector('.gallery-btn.left');
   const rightBtn = document.querySelector('.gallery-btn.right');
@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
   let position = 0;
   const imageWidth = 310;
 
-  // Clone for looping
+  
   images.forEach(img => {
     const clone = img.cloneNode(true);
     track.appendChild(clone);
   });
 
-  // Looping right scroll
+ 
   rightBtn.addEventListener('click', () => {
     position += imageWidth;
     track.style.transition = 'transform 0.3s ease';
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Looping left scroll
+  
   leftBtn.addEventListener('click', () => {
     position -= imageWidth;
     track.style.transition = 'transform 0.3s ease';
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // ===== ZOOM OVERLAY FOR IMAGES =====
+  
   const overlay = document.createElement('div');
   overlay.style.position = 'fixed';
   overlay.style.top = 0;
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ===== VIDEO LOOPING SCROLL =====
+  
   const videoTrack = document.querySelector('.videos-track');
   const videoLeftBtn = document.querySelector('.video-btn.left');
   const videoRightBtn = document.querySelector('.video-btn.right');
@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let videoPosition = 0;
 
-  // Clone videos
+ 
   videoItems.forEach(vid => {
     const clone = vid.cloneNode(true);
-    // Ensure cloned videos don't auto-play
+    
     if (clone.tagName === 'VIDEO') {
       clone.pause();
       clone.currentTime = 0;
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     videoTrack.appendChild(clone);
   });
 
-  // Looping right
+  //loop rght
   videoRightBtn.addEventListener('click', () => {
     videoPosition += videoWidth;
     videoTrack.style.transition = 'transform 0.3s ease';
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Looping left
+  //loop lft
   videoLeftBtn.addEventListener('click', () => {
     videoPosition -= videoWidth;
     videoTrack.style.transition = 'transform 0.3s ease';

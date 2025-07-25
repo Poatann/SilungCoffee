@@ -15,6 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     result += "</ul>";
 
     output.innerHTML = result;
-    form.reset(); // Clear form after submission
+    form.reset(); 
   });
 });
