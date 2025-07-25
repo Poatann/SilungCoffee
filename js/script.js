@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const images = Array.from(track.children);
 
   let position = 0;
-  const imageWidth = 310; // Adjust according to your actual image width + margin/padding
+  const imageWidth = 310; 
 
-  // Duplicate images for infinite scrolling effect
+  
   images.forEach(img => {
     const clone = img.cloneNode(true);
     track.appendChild(clone);
   });
 
-  // Scroll Left
+  
   leftBtn.addEventListener('click', () => {
     position -= imageWidth;
     if (position < 0) {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     track.style.transform = `translateX(-${position}px)`;
   });
 
-  // Scroll Right
+  
   rightBtn.addEventListener('click', () => {
     position += imageWidth;
     if (position >= track.scrollWidth / 2) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     track.style.transform = `translateX(-${position}px)`;
   });
 
-  // Zoom Overlay
+  
   const overlay = document.createElement('div');
   overlay.style.position = 'fixed';
   overlay.style.top = 0;
