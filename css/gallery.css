@@ -224,8 +224,9 @@ video:fullscreen {
 .gallery-section h2,
 .videos-section h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-top: 30px;
+  font-size: 5.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: #5e3b1d;
 }
 
