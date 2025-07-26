@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Silung Coffee | Sign Up</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/x-icon" href="img/silung coffee2.png">
+  <link rel="icon" type="image/x-icon" href="img/silung coffee2.png" />
   <script defer src="js/signup.js"></script>
 </head>
 <body>
@@ -18,61 +18,60 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
-          <li><a href="signup.html#contact">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a href="gallery.html">Feature</a></li>
         </ul>
       </nav>
     </header>
 
-    <main style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 40px auto; gap: 20px; padding: 0 20px;">
-      
-      <section style="flex: 1; min-width: 320px;">
-        <h2 style="margin-bottom: 20px;">Customer Sign-Up</h2>
-        <form id="signupForm" style="display: flex; flex-direction: column; gap: 10px;">
-          <input type="text" name="First Name" placeholder="First Name" required>
-          <input type="text" name="Last Name" placeholder="Last Name" required>
+    <main class="signup-section">
+      <h2 class="signup-heading">Customer Sign-Up</h2>
+      <div class="signup-form">
+        <form id="signupForm">
+          <input type="text" name="First Name" placeholder="First Name" required />
+          <input type="text" name="Last Name" placeholder="Last Name" required />
 
           <div>
-            <label><input type="radio" name="gender" value="Male" required> Male</label>
-            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="Gender" value="Male" required /> Male</label>
+            <label><input type="radio" name="Gender" value="Female" /> Female</label>
           </div>
 
-          <textarea name="address" rows="3" placeholder="Address" required></textarea>
-          <input type="text" name="Contact" placeholder="Contact Number" required>
-          <input type="email" name="Email" placeholder="Email Address" required>
-          <input type="date" name="dob" required>
-          <input type="text" name="Username" placeholder="Username" required>
-          <input type="password" name="Password" placeholder="Password" required>
+          <textarea name="Address" rows="3" placeholder="Address" required></textarea>
+          <input type="text" name="Contact" placeholder="Contact Number" required />
+          <input type="email" name="Email" placeholder="Email Address" required />
+          <input type="date" name="Birthdate" required />
+          <input type="text" name="Username" placeholder="Username" required />
+          <input type="password" name="Password" placeholder="Password" required />
 
-          <div style="display: flex; gap: 10px;">
-            <button type="submit" class="cta-button">Submit</button>
-            <button type="reset" class="cta-button" style="background-color: gray;">Reset</button>
+          <div class="signup-buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
           </div>
         </form>
-      </section>
 
-      <section style="flex: 1; min-width: 320px;">
-        <h2 style="margin-bottom: 20px;">Submitted Information</h2>
-        <div id="output" style="background: #f9f9f9; border: 1px solid #ccc; padding: 15px; border-radius: 5px;"></div>
-      </section>
+        <div id="output" class="signup-output">
+          <h2 class="signup-heading">Submitted Information</h2>
+        </div>
+      </div>
     </main>
 
     <footer>
-  <section id="contact" class="footer-contact">
-    <h3>Contact Us</h3>
-    <p>We'd love to hear from you! Reach out for inquiries or feedback.</p>
-    <ul>
-      <li>Email: <a href="mailto:silungcoffee@gmail.com">silungcoffee@gmail.com</a></li>
-      <li>Phone: <a href="tel:+639123456789">+63 912 345 6789</a></li>
-    </ul>
-  </section>
+      <section id="contact" class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>We'd love to hear from you! Reach out for inquiries or feedback.</p>
+        <ul>
+          <li>Email: <a href="mailto:silungcoffee@gmail.com">silungcoffee@gmail.com</a></li>
+          <li>Phone: <a href="tel:+639123456789">+63 912 345 6789</a></li>
+        </ul>
+      </section>
 
-  <div class="social-links">
-    <a href="https://www.facebook.com/profile.php?id=61557150353381" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com/silung.coffee" target="_blank">Instagram</a>
-  </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61557150353381" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/silung.coffee" target="_blank">Instagram</a>
+      </div>
 
-  <p>&copy; 2025 Silung. All rights reserved.</p>
+      <p>&copy; 2025 Silung. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>
