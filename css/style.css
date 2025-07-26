@@ -77,6 +77,18 @@ nav ul li a:hover {
   text-align: center;
 }
 
+.hero-content .subheadline {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fefefe;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero video.background-video {
   position: absolute;
   top: 50%;
@@ -218,98 +230,107 @@ nav ul li a:hover {
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* Gallery */
-.gallery-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-.gallery-container {
-  position: relative;
-  overflow: hidden;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.gallery-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  gap: 10px;
-}
-
-.gallery-track img {
-  flex: 0 0 auto;
-  width: 300px;
-  border-radius: 8px;
-  cursor: zoom-in;
-}
-
-.gallery-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: #fff;
-  background: rgba(0,0,0,0.5);
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.gallery-btn.left {
-  left: 10px;
-}
-
-.gallery-btn.right {
-  right: 10px;
-}
-
-.gallery-btn:hover {
-  background: rgba(0,0,0,0.8);
-}
-
 /* Footer */
 footer {
-  background-color: #5e3b1d;
+  background: linear-gradient(to right, #5e3b1d, #3e2a1a);
   color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 40px 20px;
 }
 
 footer p {
+  margin-bottom: 8px;
   font-size: 14px;
-  margin-bottom: 10px;
 }
 
-.footer-contact h3 {
+footer .contact-info {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+footer .social-links {
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  margin: 0 8px;
+  text-decoration: none;
+  background-color: #fff;
+  color: #5e3b1d;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+  background-color: #ffcc80;
+  color: #4b2e1f;
+}
+
+footer h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+footer .footer-bottom {
+  margin-top: 20px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+footer .footer-contact {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+footer .footer-contact h3 {
   font-size: 20px;
   margin-bottom: 10px;
   color: #fff;
 }
 
-.footer-contact p,
-.footer-contact ul li,
-.footer-contact a {
+footer .footer-contact p {
   font-size: 14px;
-  color: #ffe6cc;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-.footer-contact a:hover {
-  text-decoration: underline;
+footer .footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.social-links a {
-  margin: 0 10px;
+footer .footer-contact ul li {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+footer .footer-contact a {
+  color: #ffcc80;
   text-decoration: none;
-  color: #ffe6cc;
+}
+
+footer .social-links a:hover {
+  background-color: #ffcc80;
+  color: #4b2e1f;
+  transform: scale(1.05);
+}
+
+footer .social-links a {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #5e3b1d;
   font-weight: bold;
   font-size: 16px;
-}
-
-.social-links a:hover {
-  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .signup-section {
@@ -448,37 +469,126 @@ footer p {
   font-style: normal;
 }
 
-h2 {
-  font-size: 70px;
-  font-family: 'Sunny', sans-serif;
+/* Typography Enhancements (no font change) */
+section h2 {
+  font-size: 48px;
+  color: #5e3b1d;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-family: 'Sunny';
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4b2e1f;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+/* Nav Hover Softening */
+nav ul li a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #fff3e0;
+  transform: scale(1.05);
+}
+
+/* Hero Improvements */
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* CTA Button Enhancements */
+.cta-button {
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fff3e0;
   color: #5e3b1d;
 }
 
+/* Product Section Card Styling */
+.products .product-item {
+  background-color: #fffdf8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.products .product-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Gallery Placeholder Message */
+.gallery-track::before {
+  content: 'Gallery images coming soon!';
+  color: #999;
+  font-size: 16px;
+  margin: auto;
+  padding: 40px;
+  font-style: italic;
+  display: block;
+  text-align: center;
+}
+
+/* Footer Refinements */
+footer p,
+footer a {
+  font-size: 14px;
+  color: #ffe8c2;
+}
+
+footer a:hover {
+  color: #fff6dc;
+  background-color: #5e3b1d;
+}
+
+/* Responsive Tweaks */
 @media (max-width: 768px) {
-  nav .logo img {
-    height: 60px;
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .product-item h3 {
+    font-size: 20px;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
   }
 
-  .signup-container {
-    flex-direction: column;
-    gap: 30px;
+  section p {
+    font-size: 16px;
   }
 
-  footer {
-    text-align: center;
-  }
-
-  .signup-form {
-    flex-direction: column;
-  }
-
-  .signup-form form,
-  .signup-output {
-    flex: 1 1 100%;
+  section h2 {
+    font-size: 36px;
   }
 }

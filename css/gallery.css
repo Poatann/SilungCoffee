@@ -3,10 +3,13 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
   box-sizing: border-box;
+  background-color: #fffaf5;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
@@ -23,13 +26,15 @@ body {
 
 main {
   flex: 1;
+  padding: 20px;
 }
 
+/* === FOOTER === */
 footer {
-  background-color: #5e3b1d;
+  background: linear-gradient(to right, #5e3b1d, #3e2a1a);
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 40px 20px;
 }
 
 footer p {
@@ -50,13 +55,17 @@ footer .social-links {
 footer .social-links a {
   margin: 0 8px;
   text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: color 0.3s;
+  background-color: #fff;
+  color: #5e3b1d;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 footer .social-links a:hover {
-  color: #ffcc80;
+  background-color: #ffcc80;
+  color: #4b2e1f;
 }
 
 footer h2 {
@@ -69,6 +78,7 @@ footer .footer-bottom {
   font-size: 12px;
   opacity: 0.7;
 }
+
 footer .footer-contact {
   margin-bottom: 20px;
   padding: 20px;
@@ -102,19 +112,24 @@ footer .footer-contact a {
   text-decoration: none;
 }
 
-footer .footer-contact a:hover {
-  text-decoration: underline;
+footer .social-links a:hover {
+  background-color: #ffcc80;
+  color: #4b2e1f;
+  transform: scale(1.05);
 }
 
-.social-links a {
-  margin: 0 10px;
-  text-decoration: none;
+footer .social-links a {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 16px;
+  background-color: #fff;
   color: #5e3b1d;
   font-weight: bold;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 nav {
@@ -151,6 +166,7 @@ nav ul li a:hover {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
+/* === GALLERY AND VIDEO SECTIONS === */
 .gallery-container,
 .videos-container {
   position: relative;
@@ -161,7 +177,7 @@ nav ul li a:hover {
 .gallery-track,
 .videos-track {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   transition: transform 0.5s ease;
   will-change: transform;
 }
@@ -170,8 +186,9 @@ nav ul li a:hover {
   width: 880px;
   height: auto;
   object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
   flex-shrink: 0;
   cursor: pointer;
 }
@@ -180,8 +197,9 @@ nav ul li a:hover {
   width: 310px;
   height: 530px;
   object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
   flex-shrink: 0;
   cursor: pointer;
   background-color: black;
@@ -194,7 +212,8 @@ video:fullscreen {
 
 .gallery-track img:hover,
 .videos-track video:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
 .gallery-btn,
@@ -202,45 +221,48 @@ video:fullscreen {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #5e3b1d;
   color: white;
   border: none;
-  padding: 10px;
+  border-radius: 50%;
+  padding: 12px 16px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 28px;
   z-index: 1000;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.gallery-btn:hover,
+.video-btn:hover {
+  background-color: #8b5e3c;
+  transform: scale(1.1);
 }
 
 .gallery-btn.left,
 .video-btn.left {
-  left: 0;
+  left: 10px;
 }
 
 .gallery-btn.right,
 .video-btn.right {
-  right: 0;
+  right: 10px;
 }
 
 .gallery-section h2,
 .videos-section h2 {
   text-align: center;
-  font-size: 5.5rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #5e3b1d;
+  font-size: 3.2rem;
+  font-family: 'Sunny', cursive;
+  color: #4b2e1f;
+  margin: 20px 0;
+  letter-spacing: 1px;
 }
 
 @font-face {
   font-family: 'Sunny';
-  src: url('../fonts/Sunny.otf') format('truetype'); /* adjust the path if needed */
+  src: url('../fonts/Sunny.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-
-h2 {
-  font-size: 100px;
-  font-family: 'Sunny', sans-serif;
-  color: #5e3b1d; /* brown */
 }
 
 @media (max-width: 768px) {
@@ -248,7 +270,41 @@ h2 {
     height: 60px;
   }
 
-  nav .logo img {
-    height: 60px;
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  .gallery-track img,
+  .videos-track video {
+    width: 90vw;
+    height: auto;
+  }
+
+  .gallery-btn,
+  .video-btn {
+    display: block;
+    font-size: 22px;
+    padding: 8px 12px;
+    top: 45%;
+  }
+
+  .gallery-btn.left,
+  .video-btn.left {
+    left: 5px;
+  }
+
+  .gallery-btn.right,
+  .video-btn.right {
+    right: 5px;
+  }
+
+  .gallery-section h2,
+  .videos-section h2 {
+    font-size: 2.5rem;
   }
 }
