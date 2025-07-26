@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('signupForm');
-  const output = document.getElementById('output');
+  const outputContainer = document.getElementById('output');
+  const submittedData = document.getElementById('submittedData');
+  const clearBtn = document.getElementById('clearOutput');
+
+  // Hide the Clear button by default
+  clearBtn.style.display = 'none';
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -14,7 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     result += "</ul>";
 
-    output.innerHTML = result;
-    form.reset(); 
+    submittedData.innerHTML = result;
+    clearBtn.style.display = 'block'; // ShowS the clear button
+    form.reset();
+  });
+
+  clearBtn.addEventListener('click', function () {
+    submittedData.innerHTML = '';
+    clearBtn.style.display = 'none'; // Hide the button again
   });
 });
